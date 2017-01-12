@@ -10,8 +10,14 @@ GraphicProxy::GraphicProxy()
 
 GraphicProxy::~GraphicProxy()
 {
+	cout << "Proxy Deleted" << endl;
+
 	if (graphic)
+	{
 		delete graphic;
+		cout << "Graphic Deleted" << endl;
+	}
+
 }
 
 Graphic* GraphicProxy::getInstance(void)

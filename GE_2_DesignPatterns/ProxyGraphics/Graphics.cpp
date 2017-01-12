@@ -10,7 +10,7 @@ Graphic::Graphic()
 
 Graphic::~Graphic() 
 {
-
+	cout << "Graphic Deleted" << endl;
 }
 
 void Graphic::Draw()

@@ -3,9 +3,14 @@
 
 using namespace std;
 
-int main(void)
+void func() 
 {
 	GraphicProxy gp;
 	gp.Draw();
+}
+
+int main(void)
+{
+	func();
 	system("PAUSE");
 }
