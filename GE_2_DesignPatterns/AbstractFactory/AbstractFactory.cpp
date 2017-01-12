@@ -6,14 +6,22 @@ class Character
 {
 public:
 	Character() {}
-	virtual ~Character() {}
+	virtual ~Character() 
+	{
+		cout << "Delete Character" << endl;
+	}
 	virtual void draw() = 0;
 };
 
 class Player : public Character 
 {
 public:
-	void draw() {
+	~Player()
+	{
+		cout << "Delete Player" << endl;
+	}
+	void draw() 
+	{
 		cout << "Draw Player" << endl;
 	}
 };
@@ -21,6 +29,10 @@ public:
 class Boss : public Character 
 {
 public:
+	~Boss()
+	{
+		cout << "Delete Boss" << endl;
+	}
 	void draw()
 	{
 		cout << "Draw Boss" << endl;
@@ -48,7 +60,7 @@ public:
 	}
 };
 
-int main() 
+void func() 
 {
 	Factory * factory = new CharacterFactory;
 	vector<Character *> characters;
@@ -59,6 +71,19 @@ int main()
 	{
 		characters[i]->draw();
 	}
+
+	delete factory;
+
+	for (size_t i = 0; i < characters.size(); i++)
+	{
+		delete characters[i];
+	}
+
+}
+
+int main() 
+{
+	func();
 
 	system("PAUSE");
 }

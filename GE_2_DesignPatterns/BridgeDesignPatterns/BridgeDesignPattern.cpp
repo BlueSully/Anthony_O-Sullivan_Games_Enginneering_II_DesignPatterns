@@ -4,8 +4,18 @@ using namespace std;
 class Character
 {
 public:
-	Character() { }
-	void Print() { cout << "Printing Character" << endl; }
+	Character() 
+	{ 
+
+	}
+	~Character() 
+	{
+		cout << "Character Deleted" << endl;
+	}
+	void Print() 
+	{ 
+		cout << "Printing Character" << endl;
+	}
 };
 class HandleToCharacter
 {
@@ -13,6 +23,11 @@ public:
 	HandleToCharacter() : character(new Character())
 	{  
 
+	}
+
+	~HandleToCharacter()
+	{
+		delete character;
 	}
 
 	Character* operator->() 
@@ -24,11 +39,16 @@ private:
 	Character* character;
 };
 
-int main()
+void func()
 {
 	HandleToCharacter handle;
-	
+
 	handle->Print();
+}
+
+int main()
+{
+	func();
 
 	system("PAUSE");
 }

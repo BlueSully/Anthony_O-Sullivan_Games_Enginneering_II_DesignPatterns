@@ -19,14 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ProxyGraphics\GraphicProxy.cpp" />
-    <ClCompile Include="ProxyGraphics\Graphics.cpp" />
-    <ClCompile Include="ProxyGraphics\GraphicSource.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ProxyGraphics\GraphicProxy.h" />
-    <ClInclude Include="ProxyGraphics\Graphics.h" />
-    <ClInclude Include="ProxyGraphics\IGraphics.h" />
+    <ClCompile Include="AbstractFactory\AbstractFactory.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8C17DE5F-4EE1-4530-9FEF-72DC86284EF4}</ProjectGuid>
